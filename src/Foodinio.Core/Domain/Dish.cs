@@ -9,7 +9,6 @@ namespace Foodinio.Core.Domain
         public string Price { get; protected set; }
         public string PicturePath { get; protected set; }
         public MealType MealType { get; set; }
-
         protected Dish()
         {
 
