@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using Autofac;
 using Autofac.Extensions.DependencyInjection;
+using Foodinio.Infrastructure.EF;
 using Foodinio.Infrastructure.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.SpaServices.Webpack;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -31,6 +33,9 @@ namespace Foodinio_Web
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=Foodinio;Trusted_Connection=True;ConnectRetryCount=0";
+            services.AddDbContext<FoodinioContext>(options => options.UseSqlServer(connection));
 
             var builder = new ContainerBuilder();
             builder.Populate(services);
