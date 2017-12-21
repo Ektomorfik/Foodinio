@@ -1,3 +1,4 @@
+using System;
 using Foodinio.Core.Enums;
 
 namespace Foodinio.Core.Domain
@@ -6,7 +7,7 @@ namespace Foodinio.Core.Domain
     {
         public string Name { get; protected set; }
         public string Description { get; protected set; }
-        public string Price { get; protected set; }
+        public decimal Price { get; protected set; }
         public string PicturePath { get; protected set; }
         public MealType MealType { get; set; }
         protected Dish()

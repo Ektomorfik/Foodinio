@@ -80,3 +80,5 @@ src/Foodinio.Infrastructure/bin/Debug/netcoreapp2.0/Foodinio.Infrastructure.dll
 src/Foodinio.Infrastructure/bin/Debug/netcoreapp2.0/Foodinio.Infrastructure.deps.json
 src/Foodinio.Infrastructure/bin/Debug/netcoreapp2.0/Foodinio.Core.pdb
 src/Foodinio.Infrastructure/bin/Debug/netcoreapp2.0/Foodinio.Core.dll
+src/.vscode/tasks.json
+src/.vscode/launch.json
