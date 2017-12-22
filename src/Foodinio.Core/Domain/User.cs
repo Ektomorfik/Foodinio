@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Foodinio.Core.Exceptions;
 
 namespace Foodinio.Core.Domain
 {
@@ -36,7 +37,7 @@ namespace Foodinio.Core.Domain
         {
             if (String.IsNullOrWhiteSpace(email))
             {
-                throw new Exception();
+                throw new DomainException(ErrorCodes.InvalidEmail, "Email can not be empty.");
             }
             if (Email == email)
             {
@@ -50,7 +51,7 @@ namespace Foodinio.Core.Domain
         {
             if (String.IsNullOrWhiteSpace(firstName))
             {
-                throw new Exception();
+                throw new DomainException(ErrorCodes.InvalidFirstName, "First name can not be empty.");
             }
             if (FirstName == firstName)
             {
@@ -63,7 +64,7 @@ namespace Foodinio.Core.Domain
         {
             if (String.IsNullOrWhiteSpace(lastName))
             {
-                throw new Exception();
+                throw new DomainException(ErrorCodes.InvalidLastName, "Last name can not be empty.");
             }
             if (LastName == lastName)
             {
@@ -79,7 +80,7 @@ namespace Foodinio.Core.Domain
         {
             if (String.IsNullOrWhiteSpace(role))
             {
-                throw new Exception();
+                throw new DomainException(ErrorCodes.InvalidRole, "Role can not be empty.");
             }
             if (Role == role)
             {
@@ -93,19 +94,19 @@ namespace Foodinio.Core.Domain
         {
             if (String.IsNullOrWhiteSpace(password))
             {
-                throw new Exception();
+                throw new DomainException(ErrorCodes.InvalidPassword, "Password can not be empty.");
             }
             if (String.IsNullOrWhiteSpace(salt))
             {
-                throw new Exception();
+                throw new DomainException(ErrorCodes.InvalidPassword, "Salt can not be empty.");
             }
             if (password.Length < 4)
             {
-                throw new Exception();
+                throw new DomainException(ErrorCodes.InvalidPassword, "Password must contain at least 4 characters.");
             }
             if (password.Length > 100)
             {
-                throw new Exception();
+                throw new DomainException(ErrorCodes.InvalidPassword, "Password can not contain more than 100 characters.");
             }
             if (Password == password)
             {
