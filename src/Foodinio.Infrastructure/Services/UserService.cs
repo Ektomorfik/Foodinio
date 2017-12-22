@@ -46,6 +46,11 @@ namespace Foodinio.Infrastructure.Services
             {
                 throw new Exception();
             }
+            user = await _userRepository.GetAsync(email);
+            if (user != null)
+            {
+                throw new Exception();
+            }
             var salt = _encrypter.GetSalt(password);
             var hash = _encrypter.GetHash(password, salt);
             user = new User(userId, email, firstName, lastName, hash, salt, role);

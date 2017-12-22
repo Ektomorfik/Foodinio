@@ -4,47 +4,44 @@ using System.Linq;
 using System.Threading.Tasks;
 using Foodinio.Core.Domain;
 using Foodinio.Core.Repositories;
+using Foodinio.Infrastructure.EF;
+using Microsoft.EntityFrameworkCore;
 
 namespace Foodinio.Infrastructure.Repositories
 {
     public class UserRepository : IUserRepository
     {
-        private static ISet<User> _users = new HashSet<User>()
+        private readonly FoodinioContext _context;
+        private readonly DbSet<User> _users;
+        public UserRepository(FoodinioContext context)
         {
-            new User(Guid.NewGuid(), "user1@email.com", "Krystian", "Janicki", "secret", "salt", "user"),
-            new User(Guid.NewGuid(), "user2@email.com", "Zbigniew", "Wesołowski", "secret", "salt", "user"),
-            new User(Guid.NewGuid(), "admin1@email.com", "Janusz", "Zbiciak", "secret", "salt", "admin"),
-        };
-        public Task<User> GetAsync(Guid userId)
-        {
-            return Task.FromResult(_users.SingleOrDefault(x => x.Id == userId));
+            _context = context;
+            _users = context.Users;
         }
+        public Task<User> GetAsync(Guid id)
+            => _users.SingleOrDefaultAsync(x => x.Id == id);
 
         public Task<User> GetAsync(string email)
-        {
-            return Task.FromResult(_users.SingleOrDefault(x => x.Email == email));
-        }
+            => _users.SingleOrDefaultAsync(x => x.Email == email);
 
-        public Task<IEnumerable<User>> GetAllAsync()
-        {
-            return Task.FromResult(_users.AsEnumerable());
-        }
+        public async Task<IEnumerable<User>> GetAllAsync()
+            => await _users.ToListAsync();
 
-        public Task AddAsync(User user)
+        public async Task AddAsync(User user)
         {
-            _users.Add(user);
-            return Task.CompletedTask;
+            await _users.AddAsync(user);
+            await _context.SaveChangesAsync();
         }
-
-        public Task UpdateAsync(User user)
+        public async Task UpdateAsync(User user)
         {
-            return Task.CompletedTask;
+            _users.Update(user);
+            await _context.SaveChangesAsync();
         }
-
-        public async Task RemoveAsync(Guid userId)
+        public async Task RemoveAsync(Guid id)
         {
-            var user = await GetAsync(userId);
+            var user = await GetAsync(id);
             _users.Remove(user);
+            await _context.SaveChangesAsync();
         }
     }
 }
