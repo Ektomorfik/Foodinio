@@ -9,10 +9,9 @@ namespace Foodinio.Infrastructure.EF
         {
         }
         public DbSet<User> Users { get; set; }
-
-        // protected override void OnModelCreating(ModelBuilder modelBuilder)
-        // {
-        //     modelBuilder.Entity<User>().ToTable("Users");
-        // }
+        public DbSet<Dish> Dishes { get; set; }
+        public DbSet<DeliveryAddress> DeliveryAddresses { get; set; }
+        public DbSet<BlanketOrder> BlanketOrders { get; set; }
+        public DbSet<Order> Orders { get; set; }
     }
 }

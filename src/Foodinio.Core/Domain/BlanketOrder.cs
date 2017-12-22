@@ -7,7 +7,6 @@ namespace Foodinio.Core.Domain
     {
         public Guid UserId { get; protected set; }
         public virtual User User { get; protected set; }
-        public virtual IEnumerable<Dish> Meal { get; protected set; }
-        public decimal TotalPrice { get; protected set; }
+        public virtual IEnumerable<Dish> Dishes { get; protected set; }
     }
 }

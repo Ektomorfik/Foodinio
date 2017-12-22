@@ -35,7 +35,7 @@ namespace Foodinio_Web
             services.AddMvc();
 
             var connection = @"Server=(localdb)\mssqllocaldb;Database=Foodinio;Trusted_Connection=True;ConnectRetryCount=0";
-            services.AddDbContext<FoodinioContext>(options => options.UseSqlServer(connection));
+            services.AddDbContext<FoodinioContext>(options => options.UseSqlServer(connection, x => x.MigrationsAssembly("Foodinio.Web")));
 
             var builder = new ContainerBuilder();
             builder.Populate(services);
