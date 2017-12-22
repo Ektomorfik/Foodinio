@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/tests/Foodinio.Tests/Foodinio.Tests.csproj"
+                "${workspaceFolder}/src/Foodinio.Web/Foodinio.Web.csproj"
             ],
             "problemMatcher": "$msCompile"
         }

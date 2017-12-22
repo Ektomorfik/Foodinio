@@ -20,6 +20,7 @@ namespace Foodinio.Infrastructure.IoC
         {
             builder.RegisterInstance(AutoMapperConfig.Initialize())
                 .SingleInstance();
+            builder.RegisterModule(new SettingsModule(_configuration));
 
             builder.RegisterModule<RepositoryModule>();
             builder.RegisterModule<ServiceModule>();

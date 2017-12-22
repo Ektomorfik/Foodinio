@@ -17,15 +17,14 @@ namespace Foodinio_Web
 {
     public class Startup
     {
-        public IConfigurationRoot Configuration { get; }
+        public IConfiguration Configuration { get; }
         public IContainer ApplicationContainer { get; private set; }
 
         public Startup(IHostingEnvironment env)
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddEnvironmentVariables();
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
             Configuration = builder.Build();
         }
 
@@ -36,7 +35,6 @@ namespace Foodinio_Web
 
             var connection = @"Server=(localdb)\mssqllocaldb;Database=Foodinio;Trusted_Connection=True;ConnectRetryCount=0";
             services.AddDbContext<FoodinioContext>(options => options.UseSqlServer(connection, x => x.MigrationsAssembly("Foodinio.Web")));
-
             var builder = new ContainerBuilder();
             builder.Populate(services);
             builder.RegisterModule(new ContainerModule(Configuration));
