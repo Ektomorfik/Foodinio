@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Foodinio.Infrastructure.Commands;
 using Foodinio.Infrastructure.Commands.Users;
 using Foodinio.Infrastructure.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -7,10 +8,11 @@ using Microsoft.AspNetCore.Mvc;
 namespace Foodinio.Web.Controllers
 {
     [Route("api/[controller]")]
-    public class UserController : Controller
+    public class UserController : ApiControllerBase
     {
         private readonly IUserService _userService;
-        public UserController(IUserService userService)
+        public UserController(IUserService userService, ICommandDispatcher commandDispatcher)
+            : base(commandDispatcher)
         {
             _userService = userService;
         }
@@ -26,7 +28,7 @@ namespace Foodinio.Web.Controllers
         public async Task<IActionResult> Post([FromBody]CreateUser command)
         {
             command.UserId = Guid.NewGuid();
-            await _userService.RegisterAsync(command.UserId, command.Email, command.FirstName, command.LastName, command.Password, command.Role);
+            await DispatchAsync(command);
             return Created($"users/{command.UserId}", null);
         }
     }

@@ -24,6 +24,7 @@ namespace Foodinio.Infrastructure.IoC
 
             builder.RegisterModule<RepositoryModule>();
             builder.RegisterModule<ServiceModule>();
+            builder.RegisterModule<CommandModule>();
         }
     }
 }

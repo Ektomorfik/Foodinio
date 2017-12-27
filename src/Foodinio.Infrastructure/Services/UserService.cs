@@ -6,6 +6,7 @@ using AutoMapper;
 using Foodinio.Core.Domain;
 using Foodinio.Core.Repositories;
 using Foodinio.Infrastructure.DTO;
+using Foodinio.Infrastructure.Exceptions;
 using Foodinio.Infrastructure.Services.Encryption;
 
 namespace Foodinio.Infrastructure.Services
@@ -22,7 +23,6 @@ namespace Foodinio.Infrastructure.Services
             _encrypter = encrypter;
             _mapper = mapper;
         }
-
 
         public Task<UserDTO> GetAsync(Guid userId)
         {
@@ -41,15 +41,10 @@ namespace Foodinio.Infrastructure.Services
 
         public async Task RegisterAsync(Guid userId, string email, string firstName, string lastName, string password, string role)
         {
-            var user = await _userRepository.GetAsync(userId);
+            var user = await _userRepository.GetAsync(email);
             if (user != null)
             {
-                throw new Exception();
-            }
-            user = await _userRepository.GetAsync(email);
-            if (user != null)
-            {
-                throw new Exception();
+                throw new ServiceException(ErrorCodes.UserAlreadyExists, $"User with email: '{user.Email}' already exists.");
             }
             var salt = _encrypter.GetSalt(password);
             var hash = _encrypter.GetHash(password, salt);
