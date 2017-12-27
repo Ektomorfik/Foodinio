@@ -1,5 +1,6 @@
 using System;
 using System.Security.Cryptography;
+using Foodinio.Infrastructure.Exceptions;
 
 namespace Foodinio.Infrastructure.Services.Encryption
 {
@@ -13,6 +14,15 @@ namespace Foodinio.Infrastructure.Services.Encryption
             {
                 throw new ArgumentException("Can not generate salt from an empty value.", nameof(value));
             }
+            if (value.Length < 4)
+            {
+                throw new ServiceException(ErrorCodes.InvalidPassword, "Password must contain at least 4 characters.");
+            }
+            if (value.Length > 100)
+            {
+                throw new ServiceException(ErrorCodes.InvalidPassword, "Password can not contain more than 100 characters.");
+            }
+
 
             var random = new Random();
             var saltBytes = new byte[SaltSize];

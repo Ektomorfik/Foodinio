@@ -3,6 +3,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 using Foodinio.Core.Exceptions;
+using Foodinio.Infrastructure.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
@@ -37,6 +38,10 @@ namespace Foodinio.Infrastructure.Framework
             switch (exception)
             {
                 case DomainException ex when exceptionType == typeof(DomainException):
+                    statusCode = HttpStatusCode.BadRequest;
+                    errorCode = ex.Code;
+                    break;
+                case ServiceException ex when exceptionType == typeof(ServiceException):
                     statusCode = HttpStatusCode.BadRequest;
                     errorCode = ex.Code;
                     break;

@@ -100,14 +100,6 @@ namespace Foodinio.Core.Domain
             {
                 throw new DomainException(ErrorCodes.InvalidPassword, "Salt can not be empty.");
             }
-            if (password.Length < 4)
-            {
-                throw new DomainException(ErrorCodes.InvalidPassword, "Password must contain at least 4 characters.");
-            }
-            if (password.Length > 100)
-            {
-                throw new DomainException(ErrorCodes.InvalidPassword, "Password can not contain more than 100 characters.");
-            }
             if (Password == password)
             {
                 return;
