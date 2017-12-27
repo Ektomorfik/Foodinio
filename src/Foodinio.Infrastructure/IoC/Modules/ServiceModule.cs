@@ -2,6 +2,7 @@ using System.Reflection;
 using Autofac;
 using Foodinio.Infrastructure.Services;
 using Foodinio.Infrastructure.Services.Encryption;
+using Foodinio.Infrastructure.Services.JWT;
 
 namespace Foodinio.Infrastructure.IoC.Modules
 {
@@ -20,6 +21,10 @@ namespace Foodinio.Infrastructure.IoC.Modules
 
             builder.RegisterType<Encrypter>()
                 .As<IEncrypter>()
+                .SingleInstance();
+
+            builder.RegisterType<JwtHandler>()
+                .As<IJwtHandler>()
                 .SingleInstance();
         }
     }

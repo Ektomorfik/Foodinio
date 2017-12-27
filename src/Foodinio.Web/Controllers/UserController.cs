@@ -3,11 +3,11 @@ using System.Threading.Tasks;
 using Foodinio.Infrastructure.Commands;
 using Foodinio.Infrastructure.Commands.Users;
 using Foodinio.Infrastructure.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Foodinio.Web.Controllers
 {
-    [Route("api/[controller]")]
     public class UserController : ApiControllerBase
     {
         private readonly IUserService _userService;

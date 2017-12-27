@@ -16,8 +16,8 @@ namespace Foodinio.Infrastructure.IoC.Modules
 
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterInstance(_configuration.GetSqlSettings())
-                .SingleInstance();
+            builder.RegisterInstance(_configuration.GetSqlSettings()).SingleInstance();
+            builder.RegisterInstance(_configuration.GetJwtSettings()).SingleInstance();
         }
     }
 }

@@ -29,14 +29,39 @@ namespace Foodinio.Infrastructure.Services
             throw new NotImplementedException();
         }
 
-        public Task<UserDTO> GetAsync(string email)
+        public async Task<UserDTO> GetAsync(string email)
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                throw new Exception("Email can not be empty.");
+            }
+            var user = await _userRepository.GetAsync(email);
+            if (user == null)
+            {
+                throw new ServiceException(ErrorCodes.InvalidCredentials, "Invalid credentials");
+            }
+
+            return _mapper.Map<UserDTO>(user);
         }
         public async Task<IEnumerable<UserDTO>> BrowseAsync()
         {
             var users = await _userRepository.GetAllAsync();
             return _mapper.Map<IEnumerable<UserDTO>>(users);
+        }
+        public async Task LoginAsync(string email, string password)
+        {
+            var user = await _userRepository.GetAsync(email);
+            if (user == null)
+            {
+                throw new ServiceException(ErrorCodes.InvalidCredentials, "Invalid credentials");
+            }
+            var hash = _encrypter.GetHash(password, user.Salt);
+            if (user.Password == hash)
+            {
+                return;
+            }
+
+            throw new ServiceException(ErrorCodes.InvalidCredentials, "Invalid credentials");
         }
 
         public async Task RegisterAsync(Guid userId, string email, string firstName, string lastName, string password, string role)
@@ -51,5 +76,6 @@ namespace Foodinio.Infrastructure.Services
             user = new User(userId, email, firstName, lastName, hash, salt, role);
             await _userRepository.AddAsync(user);
         }
+
     }
 }
