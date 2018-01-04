@@ -6,5 +6,7 @@ namespace Foodinio.Infrastructure.Exceptions
         public static string UserAlreadyExists => "user_already_exists";
         public static string InvalidCredentials => "invalid_credentials";
         public static string UserNotFound => "user_not_found";
+        public static string AddressNotFound => "address_not_found";
+
     }
 }

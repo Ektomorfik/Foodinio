@@ -25,11 +25,6 @@ namespace Foodinio.Infrastructure.Services
             _mapper = mapper;
         }
 
-        public Task<UserDTO> GetAsync(Guid userId)
-        {
-            throw new NotImplementedException();
-        }
-
         public async Task<UserDTO> GetAsync(string email)
         {
             if (string.IsNullOrWhiteSpace(email))
