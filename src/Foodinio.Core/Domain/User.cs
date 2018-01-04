@@ -13,7 +13,7 @@ namespace Foodinio.Core.Domain
         public string Salt { get; protected set; }
         public string Password { get; protected set; }
         public string Role { get; set; }
-        public virtual IEnumerable<DeliveryAddress> Addresses { get; protected set; }
+        public virtual IEnumerable<Address> Addresses { get; protected set; }
         public virtual IEnumerable<Order> Orders { get; protected set; }
 
         protected User()

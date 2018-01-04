@@ -7,7 +7,7 @@ namespace Foodinio.Infrastructure.EF
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Dish> Dishes { get; set; }
-        public DbSet<DeliveryAddress> DeliveryAddresses { get; set; }
+        public DbSet<Address> DeliveryAddresses { get; set; }
         public DbSet<BlanketOrder> BlanketOrders { get; set; }
         public DbSet<Order> Orders { get; set; }
         private readonly SqlSettings _settings;

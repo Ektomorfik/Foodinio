@@ -2,7 +2,7 @@ using System;
 
 namespace Foodinio.Core.Domain
 {
-    public class DeliveryAddress : BaseEntity
+    public class Address : BaseEntity
     {
         public Guid UserId { get; protected set; }
         public virtual User User { get; protected set; }
@@ -12,7 +12,7 @@ namespace Foodinio.Core.Domain
         public string HouseNumber { get; protected set; }
         public string PostalCode { get; protected set; }
 
-        protected DeliveryAddress()
+        protected Address()
         {
 
         }
