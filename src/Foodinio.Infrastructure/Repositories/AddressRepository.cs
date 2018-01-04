@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Foodinio.Core.Domain;
 using Foodinio.Core.Repositories;
@@ -22,9 +23,10 @@ namespace Foodinio.Infrastructure.Repositories
         public async Task<Address> GetAsync(Guid id)
             => await _addresses.SingleOrDefaultAsync(x => x.Id == id);
 
-        public async Task<IEnumerable<Address>> GetAllAsync()
-            => await _addresses.ToListAsync();
-
+        public async Task<IEnumerable<Address>> BrowseAsync(Guid userId)
+            => await _addresses
+            .Where(x => x.UserId == userId)
+            .ToListAsync();
         public async Task AddAsync(Address address)
         {
             await _addresses.AddAsync(address);
@@ -35,5 +37,6 @@ namespace Foodinio.Infrastructure.Repositories
             _addresses.Remove(address);
             await _context.SaveChangesAsync();
         }
+
     }
 }

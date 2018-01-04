@@ -10,6 +10,7 @@ namespace Foodinio.Infrastructure.Mappers
         => new MapperConfiguration(cfg =>
         {
             cfg.CreateMap<User, UserDTO>();
+            cfg.CreateMap<Address, AddressDTO>();
         })
         .CreateMapper();
     }

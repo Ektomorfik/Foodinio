@@ -12,7 +12,7 @@ namespace Foodinio.Infrastructure.DTO
         public string LastName { get; set; }
         public string FullName { get; set; }
         public string Role { get; set; }
-        public IEnumerable<DeliveryAddressDTO> Addresses { get; set; }
+        public IEnumerable<AddressDTO> Addresses { get; set; }
         public IEnumerable<OrderDTO> Orders { get; set; }
     }
 }

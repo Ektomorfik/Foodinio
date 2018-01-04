@@ -8,7 +8,7 @@ namespace Foodinio.Core.Repositories
     public interface IAddressRepository : IRepository
     {
         Task<Address> GetAsync(Guid id);
-        Task<IEnumerable<Address>> GetAllAsync();
+        Task<IEnumerable<Address>> BrowseAsync(Guid userId);
         Task AddAsync(Address address);
         Task RemoveAsync(Address address);
     }

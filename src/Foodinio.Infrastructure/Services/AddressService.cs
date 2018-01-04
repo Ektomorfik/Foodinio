@@ -1,7 +1,10 @@
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using AutoMapper;
 using Foodinio.Core.Domain;
 using Foodinio.Core.Repositories;
+using Foodinio.Infrastructure.DTO;
 using Foodinio.Infrastructure.Exceptions;
 
 namespace Foodinio.Infrastructure.Services
@@ -9,9 +12,17 @@ namespace Foodinio.Infrastructure.Services
     public class AddressService : IAddressService
     {
         private readonly IAddressRepository _addressRepository;
-        public AddressService(IAddressRepository addressRepository)
+        private readonly IMapper _mapper;
+        public AddressService(IAddressRepository addressRepository, IMapper mapper)
         {
             _addressRepository = addressRepository;
+            _mapper = mapper;
+        }
+
+        public async Task<IEnumerable<AddressDTO>> BrowseAsync(Guid userId)
+        {
+            var addresses = await _addressRepository.BrowseAsync(userId);
+            return _mapper.Map<IEnumerable<AddressDTO>>(addresses);
         }
 
         public async Task AddAsync(Guid id, Guid userId, string city, string street, string houseNumber, string postalCode)
