@@ -90,7 +90,7 @@ namespace Foodinio.Core.Domain
             UpdatedAt = DateTime.UtcNow;
         }
 
-        private void SetPassword(string password, string salt)
+        public void SetPassword(string password, string salt)
         {
             if (String.IsNullOrWhiteSpace(password))
             {

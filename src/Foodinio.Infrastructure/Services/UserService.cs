@@ -7,6 +7,7 @@ using Foodinio.Core.Domain;
 using Foodinio.Core.Repositories;
 using Foodinio.Infrastructure.DTO;
 using Foodinio.Infrastructure.Exceptions;
+using Foodinio.Infrastructure.Extensions;
 using Foodinio.Infrastructure.Services.Encryption;
 
 namespace Foodinio.Infrastructure.Services
@@ -35,11 +36,7 @@ namespace Foodinio.Infrastructure.Services
             {
                 throw new Exception("Email can not be empty.");
             }
-            var user = await _userRepository.GetAsync(email);
-            if (user == null)
-            {
-                throw new ServiceException(ErrorCodes.InvalidCredentials, "Invalid credentials");
-            }
+            var user = await _userRepository.GetOrFailAsync(email);
 
             return _mapper.Map<UserDTO>(user);
         }

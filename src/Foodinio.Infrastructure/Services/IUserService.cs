@@ -7,7 +7,6 @@ namespace Foodinio.Infrastructure.Services
 {
     public interface IUserService : IService
     {
-        Task<UserDTO> GetAsync(Guid userId);
         Task<UserDTO> GetAsync(string email);
         Task<IEnumerable<UserDTO>> BrowseAsync();
         Task LoginAsync(string email, string password);
