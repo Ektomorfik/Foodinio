@@ -2,7 +2,7 @@ using System;
 
 namespace Foodinio.Infrastructure.Commands.Users
 {
-    public class CreateUser : ICommand
+    public class CreateUser : IAuthenticatedCommand
     {
         public Guid UserId { get; set; }
         public string Email { get; set; }
