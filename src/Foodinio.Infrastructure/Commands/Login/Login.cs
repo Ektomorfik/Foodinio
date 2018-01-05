@@ -1,6 +1,6 @@
 using System;
 
-namespace Foodinio.Infrastructure.Commands.Accounts
+namespace Foodinio.Infrastructure.Commands.Login
 {
     public class Login : ICommand
     {

@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 using Foodinio.Infrastructure.Commands;
-using Foodinio.Infrastructure.Commands.Accounts;
+using Foodinio.Infrastructure.Commands.Login;
 using Foodinio.Infrastructure.Extensions;
 using Foodinio.Infrastructure.Services;
 using Foodinio.Infrastructure.Services.JWT;
