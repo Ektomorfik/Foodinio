@@ -34,6 +34,15 @@ namespace Foodinio.Web.Controllers
             return Created($"address/{command.Id}", null);
         }
 
+        [HttpPut]
+        [Authorize]
+        public async Task<IActionResult> Put([FromBody]UpdateAddress command)
+        {
+            await DispatchAsync(command);
+            return NoContent();
+        }
+
+
         [HttpDelete("{id}")]
         [Authorize]
         public async Task<IActionResult> Delete(Guid id)

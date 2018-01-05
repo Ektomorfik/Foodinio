@@ -7,15 +7,15 @@ namespace Foodinio.Infrastructure.Handlers.Users
 {
     public class CreateUserHandler : ICommandHandler<CreateUser>
     {
-        private readonly IUserService _userService;
+        private readonly IRegisterService _registerService;
 
-        public CreateUserHandler(IUserService userService)
+        public CreateUserHandler(IRegisterService registerService)
         {
-            _userService = userService;
+            _registerService = registerService;
         }
         public async Task HandleAsync(CreateUser command)
         {
-            await _userService.RegisterAsync(command.UserId, command.Email,
+            await _registerService.RegisterAsync(command.UserId, command.Email,
                 command.FirstName, command.LastName, command.Password, command.Role);
         }
     }

@@ -7,14 +7,14 @@ namespace Foodinio.Infrastructure.Handlers.Users
 {
     public class UpdateUserHandler : ICommandHandler<UpdateUser>
     {
-        private readonly IAccountService _accountService;
-        public UpdateUserHandler(IAccountService accountService)
+        private readonly IUserService _userService;
+        public UpdateUserHandler(IUserService userService)
         {
-            _accountService = accountService;
+            _userService = userService;
         }
         public async Task HandleAsync(UpdateUser command)
         {
-            await _accountService.UpdateAsync(command.UserId, command.Email, command.FirstName, command.LastName);
+            await _userService.UpdateAsync(command.UserId, command.Email, command.FirstName, command.LastName);
         }
     }
 }

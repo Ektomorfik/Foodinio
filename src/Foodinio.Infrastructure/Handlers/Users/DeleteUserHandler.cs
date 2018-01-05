@@ -7,14 +7,14 @@ namespace Foodinio.Infrastructure.Handlers.Users
 {
     public class DeleteUserHandler : ICommandHandler<DeleteUser>
     {
-        private readonly IAccountService _accountService;
-        public DeleteUserHandler(IAccountService accountService)
+        private readonly IUserService _userService;
+        public DeleteUserHandler(IUserService userService)
         {
-            _accountService = accountService;
+            _userService = userService;
         }
         public async Task HandleAsync(DeleteUser command)
         {
-            await _accountService.DeleteAsync(command.UserId);
+            await _userService.DeleteAsync(command.UserId);
         }
     }
 }

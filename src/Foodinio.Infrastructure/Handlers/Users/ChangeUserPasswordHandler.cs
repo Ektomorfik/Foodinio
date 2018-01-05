@@ -7,14 +7,14 @@ namespace Foodinio.Infrastructure.Handlers.Users
 {
     public class ChangeUserPasswordHandler : ICommandHandler<ChangeUserPassword>
     {
-        private readonly IAccountService _accountService;
-        public ChangeUserPasswordHandler(IAccountService accountService)
+        private readonly IUserService _userService;
+        public ChangeUserPasswordHandler(IUserService userService)
         {
-            _accountService = accountService;
+            _userService = userService;
         }
         public async Task HandleAsync(ChangeUserPassword command)
         {
-            await _accountService.ChangePassword(command.UserId, command.CurrentPassword, command.NewPassword);
+            await _userService.ChangePassword(command.UserId, command.CurrentPassword, command.NewPassword);
         }
     }
 }

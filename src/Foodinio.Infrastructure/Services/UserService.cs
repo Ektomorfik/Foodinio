@@ -40,33 +40,38 @@ namespace Foodinio.Infrastructure.Services
             var users = await _userRepository.GetAllAsync();
             return _mapper.Map<IEnumerable<UserDTO>>(users);
         }
-        public async Task LoginAsync(string email, string password)
-        {
-            var user = await _userRepository.GetAsync(email);
-            if (user == null)
-            {
-                throw new ServiceException(ErrorCodes.InvalidCredentials, "Invalid credentials");
-            }
-            var hash = _encrypter.GetHash(password, user.Salt);
-            if (user.Password == hash)
-            {
-                return;
-            }
 
-            throw new ServiceException(ErrorCodes.InvalidCredentials, "Invalid credentials");
+        public async Task UpdateAsync(Guid userId, string email, string firstName, string lastName)
+        {
+            var user = await _userRepository.GetOrFailAsync(userId);
+
+            user.SetEmail(email);
+            user.SetFirstName(firstName);
+            user.SetLastName(lastName);
+
+            await _userRepository.UpdateAsync(user);
         }
 
-        public async Task RegisterAsync(Guid userId, string email, string firstName, string lastName, string password, string role)
+        public async Task ChangePassword(Guid userId, string currentPassword, string newPassword)
         {
-            var user = await _userRepository.GetAsync(email);
-            if (user != null)
+            var user = await _userRepository.GetOrFailAsync(userId);
+
+            var currentHash = _encrypter.GetHash(currentPassword, user.Salt);
+            if (currentHash != user.Password)
             {
-                throw new ServiceException(ErrorCodes.UserAlreadyExists, $"User with email: '{user.Email}' already exists.");
+                throw new ServiceException(ErrorCodes.InvalidPassword, "Invalid password.");
             }
-            var salt = _encrypter.GetSalt(password);
-            var hash = _encrypter.GetHash(password, salt);
-            user = new User(userId, email, firstName, lastName, hash, salt, role);
-            await _userRepository.AddAsync(user);
+
+            var salt = _encrypter.GetSalt(newPassword);
+            var password = _encrypter.GetHash(newPassword, salt);
+            user.SetPassword(password, salt);
+
+            await _userRepository.UpdateAsync(user);
+        }
+
+        public async Task DeleteAsync(Guid id)
+        {
+            await _userRepository.RemoveAsync(id);
         }
 
     }
