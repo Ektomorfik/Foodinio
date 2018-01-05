@@ -15,9 +15,9 @@ namespace Foodinio.Web.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromBody]CreateUser command)
         {
-            command.UserId = Guid.NewGuid();
+            command.Id = Guid.NewGuid();
             await DispatchAsync(command);
-            return Created($"users/{command.UserId}", null);
+            return Created($"users/{command.Id}", null);
         }
 
     }

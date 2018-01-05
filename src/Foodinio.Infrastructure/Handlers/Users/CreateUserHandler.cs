@@ -15,7 +15,7 @@ namespace Foodinio.Infrastructure.Handlers.Users
         }
         public async Task HandleAsync(CreateUser command)
         {
-            await _registerService.RegisterAsync(command.UserId, command.Email,
+            await _registerService.RegisterAsync(command.Id, command.Email,
                 command.FirstName, command.LastName, command.Password, command.Role);
         }
     }
