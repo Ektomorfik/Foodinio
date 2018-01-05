@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Foodinio.Web.Controllers
 {
+    [Authorize]
     public class UserController : ApiControllerBase
     {
         private readonly IUserService _userService;
@@ -24,12 +25,27 @@ namespace Foodinio.Web.Controllers
             return Json(users);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody]CreateUser command)
+
+        [HttpPut("ChangePassword")]
+        public async Task<IActionResult> ChangePassword([FromBody]ChangeUserPassword command)
         {
-            command.UserId = Guid.NewGuid();
             await DispatchAsync(command);
-            return Created($"users/{command.UserId}", null);
+            return NoContent();
         }
+
+        [HttpPut]
+        public async Task<IActionResult> Put([FromBody]UpdateUser command)
+        {
+            await DispatchAsync(command);
+            return NoContent();
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete()
+        {
+            await DispatchAsync(new DeleteUser());
+            return NoContent();
+        }
+
     }
 }
