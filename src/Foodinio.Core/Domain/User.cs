@@ -33,7 +33,7 @@ namespace Foodinio.Core.Domain
             UpdatedAt = DateTime.UtcNow;
         }
 
-        private void SetEmail(string email)
+        public void SetEmail(string email)
         {
             if (String.IsNullOrWhiteSpace(email))
             {
@@ -47,7 +47,7 @@ namespace Foodinio.Core.Domain
             UpdatedAt = DateTime.UtcNow;
         }
 
-        private void SetFirstName(string firstName)
+        public void SetFirstName(string firstName)
         {
             if (String.IsNullOrWhiteSpace(firstName))
             {
@@ -60,7 +60,7 @@ namespace Foodinio.Core.Domain
             FirstName = firstName;
             UpdatedAt = DateTime.UtcNow;
         }
-        private void SetLastName(string lastName)
+        public void SetLastName(string lastName)
         {
             if (String.IsNullOrWhiteSpace(lastName))
             {

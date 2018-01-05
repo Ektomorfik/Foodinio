@@ -17,6 +17,17 @@ namespace Foodinio.Infrastructure.Services
             _encrypter = encrypter;
         }
 
+        public async Task UpdateAsync(Guid userId, string email, string firstName, string lastName)
+        {
+            var user = await _userRepository.GetOrFailAsync(userId);
+
+            user.SetEmail(email);
+            user.SetFirstName(firstName);
+            user.SetLastName(lastName);
+
+            await _userRepository.UpdateAsync(user);
+        }
+
         public async Task ChangePassword(Guid userId, string currentPassword, string newPassword)
         {
             var user = await _userRepository.GetOrFailAsync(userId);
@@ -38,5 +49,6 @@ namespace Foodinio.Infrastructure.Services
         {
             await _userRepository.RemoveAsync(id);
         }
+
     }
 }
