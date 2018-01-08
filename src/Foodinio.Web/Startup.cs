@@ -65,6 +65,11 @@ namespace Foodinio_Web
             app.UseStaticFiles();
             app.UseMiddleware(typeof(ExceptionHandlerMiddleware));
             app.UseAuthentication();
+            app.UseWebpackDevMiddleware(new WebpackDevMiddlewareOptions
+            {
+                HotModuleReplacement = true,
+                HotModuleReplacementEndpoint = "/dist/__webpack_hmr"
+            });
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

@@ -1,59 +1,174 @@
-li .glyphicon {
-    margin-right: 10px;
-}
-
-/* Highlighting rules for nav menu items */
-li.link-active a,
-li.link-active a:hover,
-li.link-active a:focus {
-    background-color: #4189C7;
-    color: white;
-}
-
-/* Keep the nav menu independent of scrolling and on top of other items */
-.main-nav {
-    position: fixed;
-    top: 0;
+:host(){
+    position: absolute;
     left: 0;
     right: 0;
-    z-index: 1;
+}
+.side-nav{
+    width: 100%;
+    height: 70px;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.side-nav .hamburger{
+    color: white;
+    position: absolute;
+    z-index: 10000;
+    font-size: 30px;
+    left: 20px;
+    top: 15px;
+    cursor: pointer;
+    
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.side-nav .hamburger:hover > .mid{
+    margin: 10px 0;
+}
+
+.side-nav .hamburger .bar{
+    background-color: rgba(255,255,255,0.9);
+    margin-bottom: 5px;
+    border-radius: 2px;
+    width: 28px;
+    height: 4px;
+    opacity: 1;
+    transform: translate3d(0, 10px, 0);
+    -ms-transform: translate(0, 0);
+    transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);}
+
+.hamburger:focus ~ .side-menu{
+    transform: translateY(0%);
+}
+
+.hamburger:focus > .mid{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+}
+
+
+.hamburger:focus > .top{
+    transform: translateY(200%) rotate(45deg) !important;
+}
+
+.side-nav h1{
+    font-family: 'Annie Use Your Telescope', cursive;
+    flex-basis: 20%;
+    text-align: center;
+    margin: 0;
+    color: rgba(255,255,255,0.8);
+}
+
+.side-menu{
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.8);
+    transform: translateY(-100%);
+    transition: 0.3s transform ease-in-out;
+}
+
+.side-menu ul{
+    list-style-type: none;
+    display: flex;
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-menu ul li{   
+    margin: 25px 0;
+}
+
+.side-menu ul li a{
+    font-size: 35px;
+    color: rgba(255,255,255,0.85);
+    letter-spacing: 1px;
+    font-family: 'Scope One', serif;
+}
+
+.side-menu ul li a:hover{
+    text-decoration: none;
+    color: rgba(255,255,255,1);
+}
+
+.social-media{
+    color: rgba(255,255,255,0.9);
+    font-size: 18px;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+}
+.social-media i{
+    margin: 0 10px;
 }
 
 @media (min-width: 768px) {
-    /* On small screens, convert the nav menu to a vertical sidebar */
-    .main-nav {
-        height: 100%;
-        width: calc(25% - 20px);
+    .side-nav{
+        height: 50px;
     }
-    .navbar {
-        border-radius: 0px;
-        border-width: 0px;
-        height: 100%;
+
+}
+
+@media (min-width: 992px) {
+
+    .side-nav{
+        align-items: center;
+        padding: 0 10%;
+        height: 60px;
     }
-    .navbar-header {
-        float: none;
+    .side-nav .hamburger{
+        display: none;
     }
-    .navbar-collapse {
-        border-top: 1px solid #444;
-        padding: 0px;
+
+    .side-nav h1{
+        flex-basis: 15%;
     }
-    .navbar ul {
-        float: none;
+
+    .side-menu{
+        transform: translateY(0%);
+        background-color: transparent;
+        position: relative;
+        flex-basis: 70%;
     }
-    .navbar li {
-        float: none;
+    .side-menu ul{
+        display: flex;
+        padding: 0;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0;
+
+    }
+    .side-menu ul li{
+        display: flex;
+        align-items: center;
+    }
+    .side-menu ul li::before{
+        content: '';
+        background-color: rgba(255,255,255,0.6);
+        width: 10px;
+        height: 2px;
+        border-radius: 20px;
+        position: absolute;
+        right: -45px;
+    }
+    .side-menu ul li a{
         font-size: 15px;
-        margin: 6px;
     }
-    .navbar li a {
-        padding: 10px 16px;
-        border-radius: 4px;
-    }
-    .navbar a {
-        /* If a menu item's text is too long, truncate it */
-        width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+
+    .icons{
+        position: relative;
+        flex-basis: 15%;
+        text-align: right;
     }
 }
