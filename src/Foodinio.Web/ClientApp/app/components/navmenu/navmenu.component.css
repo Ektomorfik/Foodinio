@@ -5,7 +5,7 @@
 }
 .side-nav{
     width: 100%;
-    height: 70px;
+    height: 65px;
     background-color: rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
@@ -16,50 +16,45 @@
     color: white;
     position: absolute;
     z-index: 10000;
-    font-size: 30px;
     left: 20px;
-    top: 15px;
     cursor: pointer;
-    
+    padding: 0;
     background-color: transparent;
     border: none;
     outline: none;
 }
 
-.side-nav .hamburger:hover > .mid{
-    margin: 10px 0;
-}
-
 .side-nav .hamburger .bar{
     background-color: rgba(255,255,255,0.9);
-    margin-bottom: 5px;
-    border-radius: 2px;
-    width: 28px;
-    height: 4px;
+    width: 30px;
+    height: 2px;
     opacity: 1;
-    transform: translate3d(0, 10px, 0);
-    -ms-transform: translate(0, 0);
-    transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);}
-
-.hamburger:focus ~ .side-menu{
-    transform: translateY(0%);
+    transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
 }
 
-.hamburger:focus > .mid{
+.side-nav .hamburger .bar:nth-child(2){
+    margin: 7px 0;
+}
+
+.side-nav .hamburger:focus > .bar:nth-child(2){
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    visibility: none;
 }
 
+.side-nav .hamburger:focus > .bar:nth-child(1){
+    transform: translateY(9px) rotate(45deg);
+}
 
-.hamburger:focus > .top{
-    transform: translateY(200%) rotate(45deg) !important;
+.side-nav .hamburger:focus > .bar:nth-child(3){
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.side-nav .hamburger:focus ~ .side-menu{
+    transform: translateY(0%);
 }
 
 .side-nav h1{
     font-family: 'Annie Use Your Telescope', cursive;
-    flex-basis: 20%;
-    text-align: center;
     margin: 0;
     color: rgba(255,255,255,0.8);
 }
@@ -80,7 +75,7 @@
     list-style-type: none;
     display: flex;
     width: 100%;
-    padding: 0;
+    padding: 0 0 50px 0;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -92,7 +87,7 @@
 
 .side-menu ul li a{
     font-size: 35px;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255,255,255,0.8);
     letter-spacing: 1px;
     font-family: 'Scope One', serif;
 }
@@ -103,49 +98,51 @@
 }
 
 .social-media{
-    color: rgba(255,255,255,0.9);
-    font-size: 18px;
+    color: rgba(255,255,255,0.8);
     position: absolute;
-    right: 15px;
-    top: 25px;
+    right: 20px;
 }
 .social-media i{
-    margin: 0 10px;
+    font-size: 20px;
+}
+
+.social-media i:nth-child(2){
+    margin: 0 15px;
 }
 
 @media (min-width: 768px) {
     .side-nav{
-        height: 50px;
+        height: 70px;
     }
-
 }
 
 @media (min-width: 992px) {
 
     .side-nav{
         align-items: center;
-        padding: 0 10%;
-        height: 60px;
+        padding: 0 5%;
+        height: 75px;
     }
     .side-nav .hamburger{
         display: none;
     }
 
     .side-nav h1{
-        flex-basis: 15%;
+        flex-basis: 20%;
+        text-align: left;
     }
 
     .side-menu{
         transform: translateY(0%);
         background-color: transparent;
         position: relative;
-        flex-basis: 70%;
+        flex-basis: 60%;
     }
     .side-menu ul{
         display: flex;
         padding: 0;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
         margin: 0;
 
     }
@@ -153,22 +150,18 @@
         display: flex;
         align-items: center;
     }
-    .side-menu ul li::before{
-        content: '';
-        background-color: rgba(255,255,255,0.6);
-        width: 10px;
-        height: 2px;
-        border-radius: 20px;
-        position: absolute;
-        right: -45px;
-    }
     .side-menu ul li a{
-        font-size: 15px;
+        font-size: 16px;
+        text-transform: uppercase;
     }
 
-    .icons{
-        position: relative;
-        flex-basis: 15%;
-        text-align: right;
+    .social-media{
+        flex-basis: 20%;
+        position: initial;
+        display: flex;
+        justify-content: flex-end;
+    }
+    .social-media i:nth-child(2){
+        margin: 0 25px;
     }
 }
