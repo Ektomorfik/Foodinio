@@ -1,4 +1,4 @@
-.content{
+:host(){
     background: url('/images/header.jpg') no-repeat 50% 50%;
     width: 100%;
     height: 100vh;
@@ -24,7 +24,7 @@
     text-align: center;
 }
 
-button{
+a{
     color: rgba(255,255,255,0.8);
     text-transform: uppercase;
     border: none;

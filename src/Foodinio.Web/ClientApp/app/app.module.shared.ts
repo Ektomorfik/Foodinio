@@ -9,6 +9,7 @@ import { NavMenuComponent } from './components/navmenu/navmenu.component';
 import { HomeComponent } from './components/home/home.component';
 import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
+import { LoginComponent } from './components/login/login.component';
 import { TranslatePipe } from './components/pipes/translate.pipe';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { TranslatePipe } from './components/pipes/translate.pipe';
         CounterComponent,
         FetchDataComponent,
         HomeComponent,
+        LoginComponent,
         TranslatePipe
     ],
     imports: [
@@ -26,6 +28,7 @@ import { TranslatePipe } from './components/pipes/translate.pipe';
         FormsModule,
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
+            { path: 'login', component: LoginComponent },
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },

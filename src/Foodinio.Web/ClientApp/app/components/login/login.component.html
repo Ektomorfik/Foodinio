@@ -1,0 +1,13 @@
+<div class="login-form">
+    <div>
+        <label for="email">{{'Login_Email' | translate}}:</label>
+        <input type="text" [(ngModel)]="command.Email">
+    </div>
+    <div>
+        <label for="password">{{'Login_Password' | translate}}:</label>
+        <input type="password" [(ngModel)]="command.Password">
+    </div>
+
+    <button (click)="Login()">(T)Login</button>
+    <button>(T)Registration</button>
+</div>
