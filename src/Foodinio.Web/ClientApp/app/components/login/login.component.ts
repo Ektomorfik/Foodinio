@@ -28,6 +28,9 @@ export class LoginComponent implements OnInit {
             console.log(error);
         }
     }
+    validateEmail() {
+        console.log(123);
+    }
 
 
 }

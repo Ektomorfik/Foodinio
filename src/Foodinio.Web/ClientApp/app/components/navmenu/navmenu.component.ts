@@ -8,7 +8,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 export class NavMenuComponent {
 
     @ViewChild('hamburger') menuButton: ElementRef;
+    constructor() {
 
+    }
     toggleMenu() {
         this.menuButton.nativeElement.classList.toggle('visible');
     }

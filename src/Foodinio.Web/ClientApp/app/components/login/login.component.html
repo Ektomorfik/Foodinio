@@ -1,13 +1,30 @@
+<div class="sign-up-panel">
+    <p>{{'Paragraph_Sign_Up' | translate}}
+        <a [routerLink]="[ '/register']">{{'Button_Sign_Up' | translate}}</a>
+    </p>
+</div>
+<h1>
+    <a [routerLink]="[ '/home']">
+        <img src="/images/FoodinioLogo.svg" alt="Foodinio logo">
+        <span>
+            {{'Nav_Header' | translate}}
+        </span>
+    </a>
+</h1>
 <div class="login-form">
-    <div>
-        <label for="email">{{'Login_Email' | translate}}:</label>
-        <input type="text" [(ngModel)]="command.Email">
+    <label for="email">{{'Label_Email' | translate}}</label>
+    <div class="field">
+        <input type="text" [(ngModel)]="command.Email" placeholder="{{'Input_Email' | translate}}">
+        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+        <div class="bar"></div>
     </div>
-    <div>
-        <label for="password">{{'Login_Password' | translate}}:</label>
-        <input type="password" [(ngModel)]="command.Password">
+    <label for="password">{{'Label_Password' | translate}}</label>
+    <div class="field">
+        <input type="password" [(ngModel)]="command.Password" placeholder="{{'Input_Password' | translate}}">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <div class="bar"></div>
+        <a [routerLink]="[ '/resetpassword']">{{'Button_Forgot_Password' | translate}}</a>
     </div>
 
-    <button (click)="Login()">(T)Login</button>
-    <button>(T)Registration</button>
+    <button (click)="Login()">{{'Button_Sign_In' | translate}}</button>
 </div>

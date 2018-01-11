@@ -1,31 +1,158 @@
 :host{
-    background: url('/images/header.jpg') no-repeat 50% 50%;
+    background-color: #fff;
     width: 100%;
     height: 100vh;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: Didact Gothic;
+}
+
+a{
+    text-decoration: none;
+}
+
+.sign-up-panel{
+    height: 55px;
+    width: 100%;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    background-color: #F2F2F2;
+    box-shadow: 0 0 8px -2px black;
+}
+
+.sign-up-panel p{
+    font-size: 15px;
+    margin: 0;
+}
+
+.sign-up-panel p a{
+    color: #4ABA70;
+    font-weight: 600;
+}
+
+h1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+    transition: 0.25s transform ease-in-out;
+
+}
+
+h1:hover{
+    transform: scale(1.05);
+    /* transition: 0.25s transform ease-in-out; */
+}
+
+h1 a{
+    font-family: 'Annie Use Your Telescope', cursive;
+    color: black;
+    font-size: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 a img{
+    width: 60px;
+    margin-bottom: 15px;
 }
 
 .login-form{
-    background-color: #fff;
-    flex-basis: 70%;
-    width: 80%;
-    border: 2px dashed rgba(223, 199, 180, 1);
-    box-shadow: 0 0 0 10px #fff;
+    width: 90%;
     display: flex;
     flex-direction: column;
 }
 
-.login-form div{
+.login-form label{
+    flex-basis: 100%;
+    margin: 0;
+    font-size: 15px;
+}
+
+.login-form .field{
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.login-form .field input{
+    border: none;
+    height: 40px;
+    flex-basis: 90%;
+    color: rgba(0, 0, 0, 0.7);
+    padding-left: 5px;
+    font-family: roboto;
+    letter-spacing: 1px;
+    outline: none;
+    transition: .2s all ease-in-out;
+}
+
+.login-form .field input:focus{
+    color: rgba(0, 0, 0, 1);
+}
+
+.login-form .field input[type="password"]{
+    font-size: 20px;
+}
+
+.login-form .field a{
+    position: absolute;
+    right: 0;
+    font-family: roboto;
+    letter-spacing: 1px;
+    color: rgba(0,0,0,0.4);
+    font-size: 12px;
+    transition: .2s all ease-in-out;
+}
+
+.login-form .field a:hover{
+    color: rgba(0,0,0,0.7);
+}
+
+.login-form .field i{
+    flex-basis: 10%;
+    font-size: 22px;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.login-form .field .bar{
+    flex-basis: 100%;
+    height: 2px;
+    background-color: grey;
+    transition: .2s all ease-in-out;
+    opacity: 0.4;
+}
+
+.login-form .field input:focus ~ i,
+.login-form .field input:focus ~ .bar{
+    opacity: 1;
+}
+
+.login-form button{
+    width: 35%;
+    align-self: flex-end;
+    background-color: #4ABA70;
+    border: none;
+    border-radius: 3px;
+    height: 45px;
+    color: rgba(255,255,255,0.9);
+    font-size: 16px;
+    box-shadow: 1px 1px 7px -2px black;
 }
 
 @media (min-width: 768px){
 
 }
+
 @media (min-width: 992px){
 
 }
