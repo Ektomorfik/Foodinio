@@ -1,5 +1,5 @@
 <nav class="side-nav">
-    <button class="hamburger">
+    <button class="hamburger" (click)="toggleMenu()" #hamburger>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
@@ -9,7 +9,7 @@
     </h1>
     <aside class="side-menu">
         <ul>
-            <li [routerLinkActive]="[ 'link-active']" class="blas">
+            <li [routerLinkActive]="[ 'link-active']">
                 <a [routerLink]="[ '/home'] ">
                     {{'Menu_Home' | translate}}
                 </a>

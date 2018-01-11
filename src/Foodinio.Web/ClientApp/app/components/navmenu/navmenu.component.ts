@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'nav-menu',
@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
     styleUrls: ['./navmenu.component.css']
 })
 export class NavMenuComponent {
+
+    @ViewChild('hamburger') menuButton: ElementRef;
+
+    toggleMenu() {
+        this.menuButton.nativeElement.classList.toggle('visible');
+    }
 }
