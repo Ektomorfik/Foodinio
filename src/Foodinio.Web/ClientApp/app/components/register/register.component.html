@@ -1,0 +1,52 @@
+<div class="navigate-panel">
+    <a [routerLink]="[ '/home']">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </a>
+</div>
+<h1>
+    <a [routerLink]="[ '/home']">
+        <img src="/images/FoodinioLogo.svg" alt="Foodinio logo">
+        <span>
+            {{'Nav_Header' | translate}}
+        </span>
+    </a>
+</h1>
+<div class="register-form">
+
+    <label for="firstName">{{'Label_FirstName' | translate}}</label>
+    <div class="field">
+        <input type="text" placeholder="{{'Input_FirstName' | translate}}">
+        <i class="fa fa-address-book-o" aria-hidden="true"></i>
+        <div class="bar"></div>
+    </div>
+
+    <label for="lastName">{{'Label_LastName' | translate}}</label>
+    <div class="field">
+        <input type="text" placeholder="{{'Input_LastName' | translate}}">
+        <i class="fa fa-address-book-o" aria-hidden="true"></i>
+        <div class="bar"></div>
+    </div>
+
+    <label for="email">{{'Label_Email' | translate}}</label>
+    <div class="field">
+        <input type="text" placeholder="{{'Input_Email' | translate}}">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <div class="bar"></div>
+    </div>
+
+    <label for="password">{{'Label_Password' | translate}}</label>
+    <div class="field">
+        <input type="password" placeholder="{{'Input_Password' | translate}}">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <div class="bar"></div>
+    </div>
+
+    <label for="password">{{'Label_Repeat_Password' | translate}}</label>
+    <div class="field">
+        <input type="password" placeholder="{{'Input_Password' | translate}}">
+        <i class="fa fa-key" aria-hidden="true"></i>
+        <div class="bar"></div>
+    </div>
+
+    <button (click)="Register()">{{'Button_Sign_Up' | translate}}</button>
+</div>

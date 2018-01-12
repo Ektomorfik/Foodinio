@@ -11,6 +11,7 @@ import { FetchDataComponent } from './components/fetchdata/fetchdata.component';
 import { CounterComponent } from './components/counter/counter.component';
 import { LoginComponent } from './components/login/login.component';
 import { TranslatePipe } from './pipes/translate.pipe';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
     declarations: [
@@ -20,6 +21,7 @@ import { TranslatePipe } from './pipes/translate.pipe';
         FetchDataComponent,
         HomeComponent,
         LoginComponent,
+        RegisterComponent,
         TranslatePipe
     ],
     imports: [
@@ -29,6 +31,7 @@ import { TranslatePipe } from './pipes/translate.pipe';
         RouterModule.forRoot([
             { path: '', redirectTo: 'home', pathMatch: 'full' },
             { path: 'login', component: LoginComponent },
+            { path: 'register', component: RegisterComponent },
             { path: 'home', component: HomeComponent },
             { path: 'counter', component: CounterComponent },
             { path: 'fetch-data', component: FetchDataComponent },
