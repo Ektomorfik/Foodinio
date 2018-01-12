@@ -11,42 +11,41 @@
         </span>
     </a>
 </h1>
-<div class="register-form">
-
+<form class="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <label for="firstName">{{'Label_FirstName' | translate}}</label>
     <div class="field">
-        <input type="text" placeholder="{{'Input_FirstName' | translate}}">
+        <input type="text" formControlName="firstName" placeholder="{{'Input_FirstName' | translate}}">
         <i class="fa fa-address-book-o" aria-hidden="true"></i>
         <div class="bar"></div>
     </div>
 
     <label for="lastName">{{'Label_LastName' | translate}}</label>
     <div class="field">
-        <input type="text" placeholder="{{'Input_LastName' | translate}}">
+        <input type="text" formControlName="lastName" placeholder="{{'Input_LastName' | translate}}">
         <i class="fa fa-address-book-o" aria-hidden="true"></i>
         <div class="bar"></div>
     </div>
 
     <label for="email">{{'Label_Email' | translate}}</label>
     <div class="field">
-        <input type="text" placeholder="{{'Input_Email' | translate}}">
+        <input type="text" formControlName="email" placeholder="{{'Input_Email' | translate}}">
         <i class="fa fa-user" aria-hidden="true"></i>
         <div class="bar"></div>
     </div>
 
     <label for="password">{{'Label_Password' | translate}}</label>
     <div class="field">
-        <input type="password" placeholder="{{'Input_Password' | translate}}">
+        <input type="password" formControlName="password" placeholder="{{'Input_Password' | translate}}">
         <i class="fa fa-key" aria-hidden="true"></i>
         <div class="bar"></div>
     </div>
 
-    <label for="password">{{'Label_Repeat_Password' | translate}}</label>
+    <label for="password2">{{'Label_Repeat_Password' | translate}}</label>
     <div class="field">
-        <input type="password" placeholder="{{'Input_Password' | translate}}">
+        <input type="password" formControlName="password2" placeholder="{{'Input_Password' | translate}}">
         <i class="fa fa-key" aria-hidden="true"></i>
         <div class="bar"></div>
     </div>
 
-    <button (click)="Register()">{{'Button_Sign_Up' | translate}}</button>
-</div>
+    <button type="submit">{{'Button_Sign_Up' | translate}}</button>
+</form>
