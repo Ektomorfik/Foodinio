@@ -12,40 +12,45 @@
     </a>
 </h1>
 <form class="register-form" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <label for="firstName">{{'Label_FirstName' | translate}}</label>
     <div class="field">
+        <label for="firstName">{{'Label_FirstName' | translate}}</label>
         <input type="text" formControlName="firstName" placeholder="{{'Input_FirstName' | translate}}">
         <i class="fa fa-address-book-o" aria-hidden="true"></i>
         <div class="bar"></div>
+        <div class="invalid-field" *ngIf="fieldIsInvalid('firstName')">{{'Form_Error_FirstName_Required' | translate}}</div>
     </div>
 
-    <label for="lastName">{{'Label_LastName' | translate}}</label>
     <div class="field">
+        <label for="lastName">{{'Label_LastName' | translate}}</label>
         <input type="text" formControlName="lastName" placeholder="{{'Input_LastName' | translate}}">
         <i class="fa fa-address-book-o" aria-hidden="true"></i>
         <div class="bar"></div>
+        <div class="invalid-field" *ngIf="fieldIsInvalid('lastName')">{{'Form_Error_LastName_Required' | translate}}</div>
     </div>
 
-    <label for="email">{{'Label_Email' | translate}}</label>
     <div class="field">
+        <label for="email">{{'Label_Email' | translate}}</label>
         <input type="text" formControlName="email" placeholder="{{'Input_Email' | translate}}">
         <i class="fa fa-user" aria-hidden="true"></i>
         <div class="bar"></div>
+        <div class="invalid-field" *ngIf="fieldIsInvalid('email')">{{'Form_Error_Email_Invalid' | translate}}</div>
     </div>
 
-    <label for="password">{{'Label_Password' | translate}}</label>
     <div class="field">
+        <label for="password">{{'Label_Password' | translate}}</label>
         <input type="password" formControlName="password" placeholder="{{'Input_Password' | translate}}">
         <i class="fa fa-key" aria-hidden="true"></i>
         <div class="bar"></div>
+        <div class="invalid-field" *ngIf="fieldIsInvalid('password')">{{'Form_Error_Password_Invalid' | translate}}</div>
     </div>
 
-    <label for="password2">{{'Label_Repeat_Password' | translate}}</label>
     <div class="field">
-        <input type="password" formControlName="password2" placeholder="{{'Input_Password' | translate}}">
+        <label for="passwordConfirmation">{{'Label_Repeat_Password' | translate}}</label>
+        <input type="password" formControlName="passwordConfirmation" placeholder="{{'Input_Confirmation_Password' | translate}}">
         <i class="fa fa-key" aria-hidden="true"></i>
         <div class="bar"></div>
+        <div class="invalid-field" *ngIf="fieldIsInvalid('passwordConfirmation')">{{'Form_Error_Password_Invalid' | translate}}</div>
     </div>
 
-    <button type="submit">{{'Button_Sign_Up' | translate}}</button>
+    <button>{{'Button_Sign_Up' | translate}}</button>
 </form>

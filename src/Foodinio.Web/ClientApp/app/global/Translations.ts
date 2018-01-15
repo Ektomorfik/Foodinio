@@ -29,6 +29,7 @@ export const Translations: ITranslations = {
     //INPUTS PLACEHOLDERS
     Input_Email: { pl: 'przykladowy@domena.com', en: 'example@domain.com' },
     Input_Password: { pl: 'Hasło musi posiadać minimum 6 znaków', en: 'Must have at least 6 characters' },
+    Input_Confirmation_Password: { pl: 'Hasła muszą się zgadzać', en: 'Passwords must match' },
     Input_FirstName: { pl: 'Imię', en: 'First Name' },
     Input_LastName: { pl: 'Nazwisko', en: 'Last Name' },
 
@@ -41,6 +42,12 @@ export const Translations: ITranslations = {
 
     //PARAGRAPHS
     Paragraph_Sign_Up: { pl: 'Nie posiadasz konta?', en: "Don't have an account?" },
+
+    //ERRORS
+    Form_Error_FirstName_Required: { pl: 'Imię jest wymagane', en: 'First name is required' },
+    Form_Error_LastName_Required: { pl: 'Nazwisko jest wymagane', en: 'Last name is required' },
+    Form_Error_Email_Invalid: { pl: 'Nieprawidłowy adres email', en: 'Invalid email address' },
+    Form_Error_Password_Invalid: { pl: 'Nieprawidłowe hasło', en: 'Invalid password' },
 
 
     GetValue(key: string, language: string = languageType.pl): string {
