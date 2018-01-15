@@ -63,12 +63,22 @@ h1 a img{
     flex-direction: column;
 }
 
+.invalid-field{
+    color: #D25656;
+    position: absolute;
+    align-self: flex-end;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+
 .login-form .field{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 20px;
     position: relative;
+    justify-content: flex-end;
+
 }
 
 .login-form .field label{
