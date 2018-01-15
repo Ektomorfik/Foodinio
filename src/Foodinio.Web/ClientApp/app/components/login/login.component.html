@@ -11,20 +11,20 @@
         </span>
     </a>
 </h1>
-<div class="login-form">
-    <label for="email">{{'Label_Email' | translate}}</label>
+<form class="login-form" [formGroup]="loginForm" (onSubmit)="onSubmit()">
     <div class="field">
-        <input type="text" [(ngModel)]="command.Email" placeholder="{{'Input_Email' | translate}}">
+        <label for="email">{{'Label_Email' | translate}}</label>
         <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" formControlName="email" placeholder="{{'Input_Email' | translate}}">
         <div class="bar"></div>
     </div>
-    <label for="password">{{'Label_Password' | translate}}</label>
     <div class="field">
-        <input type="password" [(ngModel)]="command.Password" placeholder="{{'Input_Password' | translate}}">
+        <label for="password">{{'Label_Password' | translate}}</label>
         <i class="fa fa-key" aria-hidden="true"></i>
+        <input type="password" formControlName="password" placeholder="{{'Input_Password' | translate}}">
         <div class="bar"></div>
         <a [routerLink]="[ '/resetpassword']">{{'Button_Forgot_Password' | translate}}</a>
     </div>
 
-    <button (click)="Login()">{{'Button_Sign_In' | translate}}</button>
-</div>
+    <button>{{'Button_Sign_In' | translate}}</button>
+</form>
