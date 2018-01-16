@@ -1,100 +1,247 @@
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/xunit.runner.reporters.netstandard15.dll
-tests/Foodinio.Tests/obj/project.assets.json
-tests/Foodinio.Tests/obj/Foodinio.Tests.csproj.nuget.g.targets
-tests/Foodinio.Tests/obj/Foodinio.Tests.csproj.nuget.g.props
-tests/Foodinio.Tests/obj/Foodinio.Tests.csproj.nuget.cache
-tests/Foodinio.Tests/obj/Debug/netcoreapp2.0/Foodinio.Tests.pdb
-tests/Foodinio.Tests/obj/Debug/netcoreapp2.0/Foodinio.Tests.dll
-tests/Foodinio.Tests/obj/Debug/netcoreapp2.0/Foodinio.Tests.csproj.FileListAbsolute.txt
-tests/Foodinio.Tests/obj/Debug/netcoreapp2.0/Foodinio.Tests.csproj.CoreCompileInputs.cache
-tests/Foodinio.Tests/obj/Debug/netcoreapp2.0/Foodinio.Tests.csproj.CopyComplete
-tests/Foodinio.Tests/obj/Debug/netcoreapp2.0/Foodinio.Tests.Program.cs
-tests/Foodinio.Tests/obj/Debug/netcoreapp2.0/Foodinio.Tests.AssemblyInfoInputs.cache
-tests/Foodinio.Tests/obj/Debug/netcoreapp2.0/Foodinio.Tests.AssemblyInfo.cs
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/xunit.runner.visualstudio.dotnetcore.testadapter.dll
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/xunit.runner.utility.netstandard15.dll
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/Foodinio.Tests.pdb
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/Foodinio.Tests.dll
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/Foodinio.Tests.deps.json
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/Foodinio.Infrastructure.pdb
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/Foodinio.Infrastructure.dll
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/Foodinio.Core.pdb
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/Foodinio.Core.dll
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/Foodinio.Tests.runtimeconfig.json
-tests/Foodinio.Tests/bin/Debug/netcoreapp2.0/Foodinio.Tests.runtimeconfig.dev.json
-src/Foodinio.Core/bin/Debug/netstandard2.0/Foodinio.Core.pdb
-src/Foodinio.Core/bin/Debug/netstandard2.0/Foodinio.Core.dll
-src/Foodinio.Core/bin/Debug/netstandard2.0/Foodinio.Core.deps.json
-src/Foodinio.Core/obj/project.assets.json
-src/Foodinio.Core/obj/Foodinio.Core.csproj.nuget.g.targets
-src/Foodinio.Core/obj/Foodinio.Core.csproj.nuget.g.props
-src/Foodinio.Core/obj/Foodinio.Core.csproj.nuget.cache
-src/Foodinio.Core/obj/Debug/netstandard2.0/Foodinio.Core.dll
-src/Foodinio.Core/obj/Debug/netstandard2.0/Foodinio.Core.csproj.FileListAbsolute.txt
-src/Foodinio.Core/obj/Debug/netstandard2.0/Foodinio.Core.csproj.CoreCompileInputs.cache
-src/Foodinio.Core/obj/Debug/netstandard2.0/Foodinio.Core.AssemblyInfoInputs.cache
-src/Foodinio.Core/obj/Debug/netstandard2.0/Foodinio.Core.AssemblyInfo.cs
-src/Foodinio.Infrastructure/obj/Foodinio.Infrastructure.csproj.nuget.g.props
-src/Foodinio.Infrastructure/obj/Foodinio.Infrastructure.csproj.nuget.cache
-src/Foodinio.Infrastructure/bin/Debug/netstandard2.0/Foodinio.Infrastructure.pdb
-src/Foodinio.Infrastructure/bin/Debug/netstandard2.0/Foodinio.Infrastructure.dll
-src/Foodinio.Infrastructure/bin/Debug/netstandard2.0/Foodinio.Infrastructure.deps.json
-src/Foodinio.Infrastructure/bin/Debug/netstandard2.0/Foodinio.Core.pdb
-src/Foodinio.Infrastructure/bin/Debug/netstandard2.0/Foodinio.Core.dll
-src/Foodinio.Infrastructure/obj/project.assets.json
-src/Foodinio.Infrastructure/obj/Debug/netstandard2.0/Foodinio.Infrastructure.pdb
-src/Foodinio.Infrastructure/obj/Debug/netstandard2.0/Foodinio.Infrastructure.dll
-src/Foodinio.Infrastructure/obj/Debug/netstandard2.0/Foodinio.Infrastructure.csproj.FileListAbsolute.txt
-src/Foodinio.Infrastructure/obj/Debug/netstandard2.0/Foodinio.Infrastructure.csproj.CoreCompileInputs.cache
-src/Foodinio.Infrastructure/obj/Debug/netstandard2.0/Foodinio.Infrastructure.csproj.CopyComplete
-src/Foodinio.Infrastructure/obj/Debug/netstandard2.0/Foodinio.Infrastructure.AssemblyInfoInputs.cache
-src/Foodinio.Infrastructure/obj/Debug/netstandard2.0/Foodinio.Infrastructure.AssemblyInfo.cs
-tests/Foodinio.Tests.EndToEnd/obj/project.assets.json
-tests/Foodinio.Tests.EndToEnd/obj/Foodinio.Tests.EndToEnd.csproj.nuget.g.targets
-tests/Foodinio.Tests.EndToEnd/obj/Foodinio.Tests.EndToEnd.csproj.nuget.g.props
-tests/Foodinio.Tests.EndToEnd/obj/Foodinio.Tests.EndToEnd.csproj.nuget.cache
-tests/Foodinio.Tests.EndToEnd/obj/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.csproj.CoreCompileInputs.cache
-tests/Foodinio.Tests.EndToEnd/obj/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.Program.cs
-tests/Foodinio.Tests.EndToEnd/obj/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.AssemblyInfoInputs.cache
-tests/Foodinio.Tests.EndToEnd/obj/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.AssemblyInfo.cs
-src/Foodinio.Core/obj/Debug/netstandard2.0/Foodinio.Core.pdb
-src/Foodinio.Core/obj/Debug/netcoreapp2.0/Foodinio.Core.AssemblyInfo.cs
-src/Foodinio.Core/bin/Debug/netcoreapp2.0/Foodinio.Core.pdb
-src/Foodinio.Core/bin/Debug/netcoreapp2.0/Foodinio.Core.dll
-src/Foodinio.Core/obj/Debug/netcoreapp2.0/Foodinio.Core.csproj.FileListAbsolute.txt
-src/Foodinio.Core/obj/Debug/netcoreapp2.0/Foodinio.Core.csproj.CoreCompileInputs.cache
-src/Foodinio.Core/obj/Debug/netcoreapp2.0/Foodinio.Core.AssemblyInfoInputs.cache
-src/Foodinio.Core/bin/Debug/netcoreapp2.0/Foodinio.Core.deps.json
-src/Foodinio.Core/obj/Debug/netcoreapp2.0/Foodinio.Core.pdb
-src/Foodinio.Core/obj/Debug/netcoreapp2.0/Foodinio.Core.dll
-src/Foodinio.Infrastructure/obj/Foodinio.Infrastructure.csproj.EntityFrameworkCore.targets
-src/Foodinio.Infrastructure/obj/Debug/netcoreapp2.0/Foodinio.Infrastructure.pdb
-src/Foodinio.Infrastructure/obj/Debug/netcoreapp2.0/Foodinio.Infrastructure.dll
-src/Foodinio.Infrastructure/obj/Debug/netcoreapp2.0/Foodinio.Infrastructure.csproj.FileListAbsolute.txt
-src/Foodinio.Infrastructure/obj/Debug/netcoreapp2.0/Foodinio.Infrastructure.csproj.CoreCompileInputs.cache
-src/Foodinio.Infrastructure/obj/Debug/netcoreapp2.0/Foodinio.Infrastructure.csproj.CopyComplete
-src/Foodinio.Infrastructure/obj/Debug/netcoreapp2.0/Foodinio.Infrastructure.AssemblyInfoInputs.cache
-src/Foodinio.Infrastructure/obj/Debug/netcoreapp2.0/Foodinio.Infrastructure.AssemblyInfo.cs
-src/Foodinio.Infrastructure/bin/Debug/netcoreapp2.0/Foodinio.Infrastructure.pdb
-src/Foodinio.Infrastructure/bin/Debug/netcoreapp2.0/Foodinio.Infrastructure.dll
-src/Foodinio.Infrastructure/bin/Debug/netcoreapp2.0/Foodinio.Infrastructure.deps.json
-src/Foodinio.Infrastructure/bin/Debug/netcoreapp2.0/Foodinio.Core.pdb
-src/Foodinio.Infrastructure/bin/Debug/netcoreapp2.0/Foodinio.Core.dll
-src/.vscode/tasks.json
-src/.vscode/launch.json
-src/Foodinio.Infrastructure/obj/Foodinio.Web.EntityFrameworkCore.targets
-tests/Foodinio.Tests.EndToEnd/obj/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.csproj.FileListAbsolute.txt
-tests/Foodinio.Tests.EndToEnd/obj/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.csproj.CopyComplete
-tests/Foodinio.Tests.EndToEnd/bin/Debug/netcoreapp2.0/Foodinio.Web.pdb
-tests/Foodinio.Tests.EndToEnd/bin/Debug/netcoreapp2.0/Foodinio.Web.dll
-tests/Foodinio.Tests.EndToEnd/bin/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.runtimeconfig.json
-tests/Foodinio.Tests.EndToEnd/bin/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.runtimeconfig.dev.json
-tests/Foodinio.Tests.EndToEnd/bin/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.pdb
-tests/Foodinio.Tests.EndToEnd/bin/Debug/netcoreapp2.0/Foodinio.Infrastructure.pdb
-tests/Foodinio.Tests.EndToEnd/bin/Debug/netcoreapp2.0/Foodinio.Infrastructure.dll
-tests/Foodinio.Tests.EndToEnd/bin/Debug/netcoreapp2.0/Foodinio.Core.pdb
-tests/Foodinio.Tests.EndToEnd/bin/Debug/netcoreapp2.0/Foodinio.Core.dll
-tests/Foodinio.Tests.EndToEnd/obj/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.pdb
-tests/Foodinio.Tests.EndToEnd/obj/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.dll
-tests/Foodinio.Tests.EndToEnd/bin/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.dll
-tests/Foodinio.Tests.EndToEnd/bin/Debug/netcoreapp2.0/Foodinio.Tests.EndToEnd.deps.json
+**/Properties/launchSettings.json
+**/.vscode/
+## Ignore Visual Studio temporary files, build results, and
+## files generated by popular Visual Studio add-ons.
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+bin/
+Bin/
+**/obj/
+**/Obj/
+
+# Visual Studio 2015 cache/options directory
+.vs/
+**/wwwroot/dist/**
+**/ClientApp/dist/**
+
+# Workaround for https://github.com/aspnet/JavaScriptServices/issues/235
+!**/wwwroot/dist/_placeholder.txt
+!**/ClientApp/dist/_placeholder.txt
+
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# NUNIT
+*.VisualState.xml
+TestResult.xml
+
+# Build Results of an ATL Project
+[Dd]ebugPS/
+[Rr]eleasePS/
+dlldata.c
+
+# DNX
+project.lock.json
+artifacts/
+
+*_i.c
+*_p.c
+*_i.h
+*.ilk
+*.meta
+*.obj
+*.pch
+*.pdb
+*.pgc
+*.pgd
+*.rsp
+*.sbr
+*.tlb
+*.tli
+*.tlh
+*.tmp
+*.tmp_proj
+*.log
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Chutzpah Test files
+_Chutzpah*
+
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opendb
+*.opensdf
+*.sdf
+*.cachefile
+
+# Visual Studio profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+
+# TFS 2012 Local Workspace
+$tf/
+
+# Guidance Automation Toolkit
+*.gpState
+
+# ReSharper is a .NET coding add-in
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# JustCode is a .NET coding add-in
+.JustCode
+
+# TeamCity is a build add-in
+_TeamCity*
+
+# DotCover is a Code Coverage Tool
+*.dotCover
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+nCrunchTemp_*
+
+# MightyMoose
+*.mm.*
+AutoTest.Net/
+
+# Web workbench (sass)
+.sass-cache/
+
+# Installshield output folder
+[Ee]xpress/
+
+# DocProject is a documentation generator add-in
+DocProject/buildhelp/
+DocProject/Help/*.HxT
+DocProject/Help/*.HxC
+DocProject/Help/*.hhc
+DocProject/Help/*.hhk
+DocProject/Help/*.hhp
+DocProject/Help/Html2
+DocProject/Help/html
+
+# Click-Once directory
+publish/
+
+# Publish Web Output
+*.[Pp]ublish.xml
+*.azurePubxml
+# TODO: Comment the next line if you want to checkin your web deploy settings
+# but database connection strings (with potential passwords) will be unencrypted
+*.pubxml
+*.publishproj
+
+# NuGet Packages
+*.nupkg
+# The packages folder can be ignored because of Package Restore
+**/packages/*
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+# Uncomment if necessary however generally it will be regenerated when needed
+#!**/packages/repositories.config
+
+# Microsoft Azure Build Output
+csx/
+*.build.csdef
+
+# Microsoft Azure Emulator
+ecf/
+rcf/
+
+# Microsoft Azure ApplicationInsights config file
+ApplicationInsights.config
+
+# Windows Store app package directory
+AppPackages/
+BundleArtifacts/
+
+# Visual Studio cache files
+# files ending in .cache can be ignored
+*.[Cc]ache
+# but keep track of directories ending in .cache
+!*.[Cc]ache/
+
+# Others
+ClientBin/
+~$*
+*~
+*.dbmdl
+*.dbproj.schemaview
+*.pfx
+*.publishsettings
+orleans.codegen.cs
+
+# Workaround for https://github.com/aspnet/JavaScriptServices/issues/235
+**/node_modules/**
+!**/node_modules/_placeholder.txt
+
+# RIA/Silverlight projects
+Generated_Code/
+
+# Backup & report files from converting an old project file
+# to a newer Visual Studio version. Backup files are not needed,
+# because we have git ;-)
+_UpgradeReport_Files/
+Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Business Intelligence projects
+*.rdl.data
+*.bim.layout
+*.bim_*.settings
+
+# Microsoft Fakes
+FakesAssemblies/
+
+# GhostDoc plugin setting file
+*.GhostDoc.xml
+
+# Node.js Tools for Visual Studio
+.ntvs_analysis.dat
+
+# Visual Studio 6 build log
+*.plg
+
+# Visual Studio 6 workspace options file
+*.opt
+
+# Visual Studio LightSwitch build output
+**/*.HTMLClient/GeneratedArtifacts
+**/*.DesktopClient/GeneratedArtifacts
+**/*.DesktopClient/ModelManifest.xml
+**/*.Server/GeneratedArtifacts
+**/*.Server/ModelManifest.xml
+_Pvt_Extensions
+
+# Paket dependency manager
+.paket/paket.exe
+
+# FAKE - F# Make
+.fake/
+
